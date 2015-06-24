@@ -1,0 +1,30 @@
+{
+  "name": "postcss-shortcss",
+  "version": "0.0.0",
+  "description": "PostCSS plugin for disassemble and assemble CSS properties",
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "shorthand"
+  ],
+  "author": "Anton Winogradov <winogradovaa@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/theprotein/postcss-shortcss.git"
+  },
+  "dependencies": {
+    "postcss": "^4.1.9",
+    "shortcss": "git://github.com/theprotein/shortcss.git"
+  },
+  "devDependencies": {
+    "gulp-eslint": "^0.12.0",
+    "gulp-mocha": "^2.0.1",
+    "chai": "^2.3.0",
+    "gulp": "^3.8.11"
+  },
+  "scripts": {
+    "test": "gulp"
+  }
+}

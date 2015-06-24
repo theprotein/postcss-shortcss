@@ -1,6 +1,5 @@
 var postcss = require('postcss'),
-    shortcss = require('shortcss'),
-    _ = require('lodash');
+    shortcss = require('shortcss');
 
 module.exports = postcss.plugin('postcss-shortcss', function(opts) {
     opts = opts || {};
@@ -12,10 +11,15 @@ module.exports = postcss.plugin('postcss-shortcss', function(opts) {
 
             nodes.forEach(function(node) {
                 if(shortcss.expand(node.prop).length > 1) {
-                    node.replaceWith(shortcss.expand(node.prop, node.value, false))
+                    var expandedProp = shortcss.expand(node.prop, node.value, false);
+                    Object.keys(expandedProp).forEach(function(key) {
+                        rule.append({ prop: key, value: expandedProp[key]});
+                    });
+
+                    node.removeSelf();
                 } else {
                     result.warn(
-                        node.prop + 'is not shorthand \n',
+                        node.prop + ' is not shorthand \n',
                       { node: rule }
                     );
                 }

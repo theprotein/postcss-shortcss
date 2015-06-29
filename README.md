@@ -12,9 +12,9 @@ Before:
 After:
 ```css
 .foo {
-  list-style-type: none;
-  list-style-position: none;
-  list-style-image: none;
+	list-style-type: none;
+    list-style-position: none;
+    list-style-image: none;
 }
 ```
 

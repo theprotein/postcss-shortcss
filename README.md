@@ -1,20 +1,20 @@
-# PostCSS ShortCSS [![Build Status][ci-img]][ci]
+# postcss-shortcss
 
-[PostCSS] plugin for disassemble and assemble CSS properties.
+[PostCSS](https://github.com/postcss/postcss) plugin for disassemble and assemble CSS properties.
 
-[PostCSS]: https://github.com/postcss/postcss
-[ci-img]:  https://travis-ci.org/theprotein/postcss-shortcss.svg
-[ci]:      https://travis-ci.org/theprotein/postcss-shortcss
-
+Before:
 ```css
 .foo {
-    /* Input example */
+    list-style: none;
 }
 ```
 
+After:
 ```css
 .foo {
-  /* Output example */
+  list-style-type: none;
+  list-style-position: none;
+  list-style-image: none;
 }
 ```
 
@@ -23,5 +23,3 @@
 ```js
 postcss([ require('postcss-shortcss') ])
 ```
-
-See [PostCSS] docs for examples for your environment.

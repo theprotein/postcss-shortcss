@@ -1,6 +1,6 @@
 # postcss-shortcss
 
-[PostCSS](https://github.com/postcss/postcss) plugin for disassemble and assemble CSS properties.
+[PostCSS](https://github.com/postcss/postcss) plugin for disassemble and assemble CSS properties. It work on [shortcss](https://github.com/theprotein/shortcss) library.
 
 Before:
 ```css
